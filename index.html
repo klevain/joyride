@@ -78,15 +78,16 @@
       }
       blockquote:after,
       blockquote:before{
-        display:inline-block;
-      }
-      blockquote:after{
-        content:'\00BB';
-        content:'>>';
+        display:block;
       }
       blockquote:before{
         content:'\00AB';
         content:'<<';
+      }
+      blockquote:after{
+        content:'\00BB';
+        content:'>>';
+        text-align:right;
       }
       figcaption{
         text-align:right;
