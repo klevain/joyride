@@ -1,2 +1,2 @@
-# joyride.github.io
+# joyride
 Joyride Pictures static website
