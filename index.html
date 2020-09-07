@@ -40,7 +40,7 @@
       aside{
         background:#000;
         color:#fff;
-        overflow:hidden;
+        padding: calc(1rem / 4) 1rem;
       }
       aside a:link{color: #ffff11;}
       aside a:visited{color: #aae574;}
@@ -67,16 +67,14 @@
       em a:hover{color: #0ff;}
       em a:active{color: #f0f;}
       figure {
-        margin-left:1rem;
-        margin-right:1rem;
-      }
-      figure>* {
         margin-left:0;
         margin-right:0;
       }
       blockquote{
         background: #000;
         color: #fff;
+        margin-left:0;
+        margin-right:0;
       }
       blockquote:after,
       blockquote:before{
@@ -95,6 +93,12 @@
       }
       figcaption:before{
         content:'\2014\00a0';
+      }
+      figcaption:first-child{
+        margin-top: 1rem;
+      }
+      figcaption:last-child{
+        margin-bottom: 1rem;
       }
       h1 {
         display:inline-block;
