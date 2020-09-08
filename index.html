@@ -11,9 +11,12 @@
       html{
         overflow-x: hidden;
         font-size: 100%;
+        background: cornflowerblue;
       }
       body{
         background:#fff;
+        margin: 0 auto;
+        max-width: 16cm;
       }
       li {
         list-style-type:'> ';
@@ -27,19 +30,81 @@
         margin:0;
         padding:0.01rem 1rem;
       }
-      header, footer, article, aside, hr{
-        transform: rotate(-1.61803deg);
-      }
-      header {
-        text-align:center;
-      }
-
-      header{
-        background: #000;
-      }
       
       a:hover{color:#f00}
       a:active{color:#0f0}
+
+      a.video {
+        position: relative;
+        background:#fff;
+        display: block;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+      a.video:link{color: #ffff11;}
+      a.video:visited{color: #aae574;}
+      a.video:hover{color: #0ff;}
+      a.video:active{color: #f0f;}
+      a.video img {
+        display: block;
+        width: 100%;
+      }
+      a.video:after {
+        content: '>';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 3rem;
+        background: #000;
+        text-align: center;
+        text-decoration: inherit;
+        padding-right: 0.2rem;
+        padding-left: 0.2rem;
+        display: block;
+      } 
+
+      article form {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+      article form input{
+        display: none;
+      }
+      article form input ~ div {
+        display: none;
+      }
+      article form input ~ label {
+        color: #00e;
+      }
+      article form input ~ label:before {
+        content: '+ ';
+      }
+      article form input:checked ~ div {
+        display: inherit;
+      }
+      article form input:checked ~ label {
+        color: #551A8B;
+      }
+      article form input:checked ~ label:before {
+        content: '- ';
+      }
+      article form label{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding-left: 2.5rem;
+        text-decoration: underline;
+        text-decoration-style: dotted;
+        cursor: pointer;
+      }
+      article form label:hover{
+        color: #f00;
+      }
+      article form label:before{
+        position: absolute;
+        transform: translateX(-200%);
+        color: black;
+      }
 
       aside{
         background:#000;
@@ -59,6 +124,7 @@
         margin-left: -6.4rem;
         margin-right: -6.4rem;
       }
+
       em {
         background: #000;
         color: #fff;
@@ -70,43 +136,46 @@
       em a:visited{color: #aae574;}
       em a:hover{color: #0ff;}
       em a:active{color: #f0f;}
+
       figure {
         margin-left:0;
         margin-right:0;
       }
-      blockquote{
-        background: #000;
-        color: #fff;
+      blockquote {
         margin-left:1rem;
         margin-right:1rem;
+        text-align: center;
       }
-      blockquote:after,
-      blockquote:before{
+      blockquote:before,
+      blockquote:after {
+        content: '//';
+        margin-left: -1.2rem;
+        margin-right: -1rem;
         display:block;
       }
-      blockquote:before{
-        content: '\\\\';
-        margin-left: -0.8rem;
-        margin-right: -0.8rem;
-        text-align: left;
-      }
-      blockquote:after{
-        content: '//';
-        margin-left: -0.8rem;
-        margin-right: -0.8rem;
+      figcaption {
         text-align: right;
+        font-size: 0.8rem;
       }
-      figcaption{
-        text-align:right;
-      }
-      figcaption:before{
+      figcaption:before {
         content:'\2014\00a0';
       }
-      figcaption:first-child{
+      figcaption:first-child {
         margin-top: 1rem;
       }
-      figcaption:last-child{
+      figcaption:last-child {
         margin-bottom: 1rem;
+      }
+      blockquote:before {
+        text-align: left;
+      }
+      blockquote:after {
+        text-align: right;
+      }
+      
+      header {
+        text-align:center;
+        background: #000;
       }
       h1 {
         display:inline-block;
@@ -114,6 +183,7 @@
         border: 1px solid #000;
         background: #fff;
         animation: animLogo 8s ease infinite both;
+        margin-bottom: 0.2rem;
       }
       footer h2 {
         display:inline-block;
@@ -201,13 +271,13 @@
         }
         30% {
           background: #000;
-          border-color: #000;
+          border-color: #fff;
           color: #fff;
           transform: rotate(3deg);
         }
         69% {
           background: #000;
-          border-color: #000;
+          border-color: #fff;
           color: #fff;
           transform: rotate(3deg);
         }
@@ -277,7 +347,8 @@
           color: #000;
           transform: rotate(0);
         }
-      }</style>
+      }
+    </style>
   </head>
   <body id="home">
     <header>
@@ -286,17 +357,33 @@
     </header>
     <hr>
     <main>
-      <article>
+      <article id="tristes-tropiques">
         <h2>
-          <em><a href="https://vimeo.com/92838332">Tristes Tropiques</a></em>
+          <em><a href="https://vimeo.com/92838332" title="Play “Tristes Tropiques” on Vimeo">Tristes Tropiques</a></em>
         </h2>
         <p>Free and splashy adaptation of eponym work by Claude Lévi-Strauss.</p>
-        <iframe src="https://giphy.com/embed/YqtrxQlyqqjzZcqDj7" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        <a class="video" href="https://vimeo.com/92838332" title="Play “Tristes Tropiques” on Vimeo">
+          <img src="media/visual-tristes-tropiques.gif" alt=""/>
+        </a>
         <ul>
           <li><a href="https://www.imdb.com/title/tt1254207/">Twitter</a></li>
           <li><a href="https://www.imdb.com/title/tt1254207/">IMDB</a></li>
           <li><a href="https://www.imdb.com/title/tt1254207/">Rotten&nbsp;Tomatoes</a></li>
         </ul>
+        <form>
+          <input type="checkbox" id="tristes-tropiques-readmore">
+          <label for="tristes-tropiques-readmore">Read more</label>
+          <div>
+            <p>And a pinch of pseudo latin stuffing content : Et Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+            <figure>
+              <blockquote>
+                <p>Pinch contenus, un jour je vais me faire reperadus. Et Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+              </blockquote>
+              <figcaption><a href="#captain">M4X1m3 L3HM4Nn</a></figcaption>
+            </figure>
+            <p>Numquam dolor consequatur sint consequatur voluptas. Repellat maxime dolorem ratione ut aspernatur ullam voluptatibus.</p>
+          </div>
+        </form>
       </article>
       <hr>
       <aside>
@@ -313,7 +400,9 @@
           <em><a href="https://vimeo.com/119615168">Diva by Night</a></em>
         </h2>
         <p>Crazy queen interview.</p>
-        <iframe src="https://giphy.com/embed/LQhatCyErmU8FeypgO" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        <a class="video" href="https://vimeo.com/92838332">
+          <img src="media/visual-diva-by-night.gif" alt=""/>
+        </a>
         <ul>
           <li><a href="https://www.imdb.com/title/tt1254207/">IMDB</a></li>
           <li><a href="https://www.imdb.com/title/tt1254207/">Blender</a></li>
@@ -338,11 +427,10 @@
     </main>
     <hr>
     <footer>
-      <h2>JOYRIDE</h2>
-      <h3>Pictures ©2081</h3>
-    </footer>
-    <hr>
-    <footer>
+      <div>
+        <h2>JOYRIDE</h2>
+        <h3>Pictures ©2081</h3>
+      </div>
       <nav>
         <h4>Contact :</h4>
         <ul>
@@ -366,9 +454,6 @@
           </li>
         </ul>
       </nav>
-    </footer>
-    <hr>
-    <footer>
       <nav>
         <h4>Languages :</h4>
         <ul>
@@ -377,16 +462,11 @@
           <li lang="es"><a href="es">español</a></li>
         </ul>
       </nav>
-    </footer>
-    <hr>
-    <footer>
-      <aside>
         <h4>Privacy Policy :</h4>
         <ol>
           <li><p><em>We do not track.</em></p></li>
           <li><p><em>Really.</em></p></li>
         </ol>
-      </aside>
     </footer>
   </body>
 </html>
