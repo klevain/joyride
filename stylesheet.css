@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+
+:root {
+  /* global */
+  --font-family: 'Courier Prime', monospace;
+  --background: #666;
+
+  /* light block */
+  --light-a-link-color: #00e;
+  --light-a-visited-color : #551A8B;
+  --light-a-hover-color : #f00;
+  --light-a-active-color : #0f0;
+  --light-color: #000;
+  --light-background: #fff;
+
+  /* Dark block */
+  --dark-a-link-color: #ffff11;
+  --dark-a-visited-color : #aae574;
+  --dark-a-hover-color : #0ff;
+  --dark-a-active-color : #f0f;
+  --dark-color: #fff;
+  --dark-background: #000;
+}
+* {
+  /* mix-blend-mode: luminosity; */
+  font-family: var(--font-family);
+}
+html{
+  overflow-x: hidden;
+  font-size: 100%;
+}
+body{
+  margin: 0;
+  background: var(--background);
+}
+body>div{
+  margin: 0 auto;
+  max-width: 16cm;
+}
+ul{
+  padding-left: 1.8rem;
+}
+li {
+  list-style-type:'> ';
+}
+header, footer, article, aside {
+  margin:0;
+  padding:0.01rem 1rem;
+}
+
+a:hover{color: var(--light-a-hover-color)}
+a:active{color: var(--light-a-active-color)}
+
+a.video {
+  position: relative;
+  background: var(--light-background);
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+a.video:link{color: var(--dark-a-link-color);}
+a.video:visited{color: var(--dark-a-visited-color);}
+a.video:hover{color: var(--dark-a-hover-color);}
+a.video:active{color: var(--dark-a-active-color);}
+a.video img {
+  display: block;
+  width: 100%;
+}
+a.video:after {
+  content: '>';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  background: var(--dark-background);
+  text-align: center;
+  text-decoration: inherit;
+  padding-right: 0.2rem;
+  padding-left: 0.2rem;
+  display: block;
+}
+article {
+  background: var(--light-background);
+  color: var(--light-color);
+}
+article form {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+article form input{
+  display: none;
+}
+article form input ~ div {
+  display: none;
+}
+article form input ~ label {
+  color: var(--light-a-link-color);
+}
+article form input ~ label:before {
+  content: '+ ';
+}
+article form input:checked ~ div {
+  display: inherit;
+}
+article form input:checked ~ label {
+  color: var(--light-a-visited-color);
+}
+article form input:checked ~ label:before {
+  content: '- ';
+}
+article form label{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 1.8rem;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  cursor: pointer;
+}
+article form label:hover{
+  color: var(--light-a-hover-color);
+}
+article form label:before{
+  position: absolute;
+  transform: translateX(-200%);
+  color: var(--light-color);
+}
+
+aside{
+  background: var(--dark-background);
+  color: var(--dark-color);
+}
+aside a:link{color: var(--dark-a-link-color);}
+aside a:visited{color: var(--dark-a-visited-color);}
+aside a:hover{color: var(--dark-a-hover-color);}
+aside a:active{color: var(--dark-a-active-color);}
+
+hr {
+  display: none;
+  border-top: .1rem solid var(--background);
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  margin-left: -6.4rem;
+  margin-right: -6.4rem;
+}
+
+em {
+  background: var(--dark-background);
+  color: var(--dark-color);
+  font-style: normal;
+  padding-left: .2rem;
+  padding-right: .2rem;
+}
+em a:link{color: var(--dark-a-link-color);}
+em a:visited{color: var(--dark-a-visited-color);}
+em a:hover{color: var(--dark-a-hover-color);}
+em a:active{color: var(--dark-a-active-color);}
+
+figure {
+  margin-left:0;
+  margin-right:0;
+}
+blockquote {
+  margin-left:1rem;
+  margin-right:1rem;
+  text-align: center;
+}
+blockquote:before,
+blockquote:after {
+  content: '//';
+  margin-left: -1.2rem;
+  margin-right: -1rem;
+  display:block;
+}
+figcaption {
+  text-align: right;
+  font-size: 0.8rem;
+}
+figcaption:before {
+  content:'\2014\00a0';
+}
+figcaption:first-child {
+  margin-top: 1rem;
+}
+figcaption:last-child {
+  margin-bottom: 1rem;
+}
+blockquote:before {
+  text-align: left;
+}
+blockquote:after {
+  text-align: right;
+}
+
+address {
+  font-style: normal;
+}
+
+header {
+  text-align:center;
+  background: var(--dark-background);
+}
+h1 {
+}
+svg.logo {
+  display: block;
+  height: 4rem;
+  margin: 0 auto;
+}
+svg.logo .label {
+  fill: #fff;
+}
+svg.logo .frame {
+  fill: #fff;
+}
+svg.logo .reverse {
+  fill: transparent;
+}
+
+footer{
+  background: var(--light-background);
+}
+
+/*
+  Theme 0 : PLAIN  
+*/
+/* h1 {
+  animation: animLogo 8s ease infinite both;
+}
+@keyframes animLogo {
+  0% {
+    background: #fff;
+    border-color: #000;
+    color: #000;
+    transform: rotate(0);
+  }
+  19% {
+    background: #fff;
+    border-color: #000;
+    color: #000;
+    transform: rotate(0);
+  }
+  20% {
+    background: #ff0;
+    border-color: #ff0;
+    color: #00f;
+    transform: rotate(2deg);
+  }
+  21% {
+    background: #0ff;
+    border-color: #0ff;
+    color: #f00;
+    transform: rotate(-2deg);
+  }
+  22% {
+    background: #f00;
+    border-color: #f00;
+    color: #0ff;
+    transform: rotate(2deg);
+  }
+  23% {
+    background: #0f0;
+    border-color: #0f0;
+    color: #f0f;
+    transform: rotate(-2deg);
+  }
+  24% {
+    background: #00f;
+    border-color: #00f;
+    color: #ff0;
+    transform: rotate(2deg);
+  }
+  25% {
+    background: #0ff;
+    border-color: #0ff;
+    color: #f00;
+    transform: rotate(-2deg);
+  }
+  26% {
+    background: #f0f;
+    border-color: #f0f;
+    color: #0f0;
+    transform: rotate(2deg);
+  }
+  27% {
+    background: #ff0;
+    border-color: #ff0;
+    color: #00f;
+    transform: rotate(-2deg);
+  }
+  28% {
+    background: #0f0;
+    border-color: #0f0;
+    color: #f0f;
+    transform: rotate(2deg);
+  }
+  29% {
+    background: #00f;
+    border-color: #00f;
+    color: #ff0;
+    transform: rotate(-2deg);
+  }
+  30% {
+    background: #000;
+    border-color: #fff;
+    color: #fff;
+    transform: rotate(3deg);
+  }
+  69% {
+    background: #000;
+    border-color: #fff;
+    color: #fff;
+    transform: rotate(3deg);
+  }
+  70% {
+    background: #00f;
+    border-color: #00f;
+    color: #ff0;
+    transform: rotate(-2deg);
+  }
+  71% {
+    background: #0f0;
+    border-color: #0f0;
+    color: #f0f;
+    transform: rotate(2deg);
+  }
+  72% {
+    background: #f00;
+    border-color: #f00;
+    color: #0ff;
+    transform: rotate(-2deg);
+  }
+  73% {
+    background: #0f0;
+    border-color: #0f0;
+    color: #f0f;
+    transform: rotate(2deg);
+  }
+  74% {
+    background: #00f;
+    border-color: #00f;
+    color: #ff0;
+    transform: rotate(-2deg);
+  }
+  75% {
+    background: #0ff;
+    border-color: #0ff;
+    color: #f00;
+    transform: rotate(2deg);
+  }
+  76% {
+    background: #f0f;
+    border-color: #f0f;
+    color: #0f0;
+    transform: rotate(-2deg);
+  }
+  77% {
+    background: #ff0;
+    border-color: #ff0;
+    color: #00f;
+    transform: rotate(2deg);
+  }
+  78% {
+    background: #0ff;
+    border-color: #0ff;
+    color: #f00;
+    transform: rotate(-2deg);
+  }
+  79% {
+    background: #ff0;
+    border-color: #ff0;
+    color: #00f;
+    transform: rotate(2deg);
+  }
+  80% {
+    background: #fff;
+    border-color: #000;
+    color: #000;
+    transform: rotate(0);
+  }
+  100% {
+    background: #fff;
+    border-color: #000;
+    color: #000;
+    transform: rotate(0);
+  }
+} */
+/*
+  end Theme 0 : PLAIN  
+*/
+
+/*
+  Theme 1 : GRADIENT  
+*/
+/* html{
+  background: linear-gradient(90deg, #00C9FF, #92FE9D, #FC466B 0%, #3F5EFB 100%);
+  background-size: 600% 600%;
+  animation: animBackgrounnd 8s ease infinite;
+}
+body {
+  background: rgba(255, 255, 255, 0.2);
+}
+header, article, aside, footer{
+  mix-blend-mode: luminosity;
+}
+
+header, aside, em {
+  background: linear-gradient(90deg, rgb(79, 79, 79) 0%, rgb(32, 32, 32) 100%);
+}
+footer {
+  background: linear-gradient(90deg, rgba(180,180,180,1) 0%, rgba(76,76,76,1) 100%);
+}
+
+article {
+  background: linear-gradient(90deg, rgb(125, 125, 125) 0%, rgb(208, 208, 208) 100%);
+}
+
+@keyframes animBackgrounnd {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+} */
+/*
+  End Theme 1 : GRADIENT  
+*/
+/*
+  Theme 2 : Salmon is the new Black  
+*/
+article {
+  background: salmon;
+}
+html{
+  background: salmon;
+  font-size: 100%;
+  line-height: 1.6rem;
+  letter-spacing: 0rem;
+}
+body {
+  background: url(media/theme-2-pattern-tierce.gif) repeat;
+  mix-blend-mode: multiply;
+}
+body>div {
+  background: salmon;
+  box-shadow: 0 0 6rem 6rem var(--light-color);
+}
+/*
+  End Theme 2 : Salmon is the new Black  
+*/
