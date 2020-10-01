@@ -1,0 +1,87 @@
+/*
+  Theme 2 : Salmon is the new Black
+*/
+:root {
+    /* --font-family: 'Crimson Pro', cursive; */
+    /* --header-font-family: 'Berkshire Swash'; */
+  
+    /* light block */
+    --light-a-link-color: #00e;
+    --light-a-visited-color : #551A8B;
+    --light-a-hover-color : #f00;
+    --light-a-active-color : #0f0;
+    --light-color: #000;
+    --light-background: salmon;
+  
+    /* Dark block */
+    --dark-a-link-color: #ffff11;
+    --dark-a-visited-color : #aae574;
+    --dark-a-hover-color : #0ff;
+    --dark-a-active-color : #f0f;
+    --dark-color: #fff;
+    --dark-background: #000;
+  }
+  html{
+    background: salmon;
+    letter-spacing: 0.2rem;
+    mix-blend-mode: multiply;
+  }
+  body {
+    background: url(media/theme-2-pattern-tierce.gif) repeat;
+    background-position: center top;
+    background-size: 24%;
+    animation: animLogo 4s linear infinite;
+  }
+  body>div {
+    background: salmon;
+    box-shadow: 0 0 6rem 6rem var(--light-color);
+  }
+  h2 {
+    font-size: 4rem;
+    font-family: var(--header-font-family);
+    letter-spacing: 0;
+  }
+  a.video:after {
+    content: unset;
+  }
+  p {
+    margin: 3rem 0;
+  }
+  ul>li {
+    list-style-type:'~  ';
+  }
+  @keyframes animBackground {
+    0% {
+      background-size: 4%;
+    }
+    19% {
+      background-size: 4%;
+    }
+    20% {
+      background-size: 24%;
+    }
+    39% {
+      background-size: 24%;
+    }
+    40% {
+      background-size: 54%;
+    }
+    59% {
+      background-size: 54%;
+    }
+    60% {
+      background-size: 104%;
+    }
+    79% {
+      background-size: 104%;
+    }
+    80% {
+      background-size: 204%;
+    }
+    100% {
+      background-size: 204%;
+    }
+  }
+  /*
+    End Theme 2 : Salmon is the new Black
+  */

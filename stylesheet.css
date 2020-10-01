@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap');
 :root {
   /* global */
   --font-family: 'Courier Prime', monospace;
@@ -23,11 +24,11 @@
 }
 * {
   /* mix-blend-mode: luminosity; */
-  font-family: var(--font-family);
 }
 html{
   overflow-x: hidden;
   font-size: 100%;
+  font-family: var(--font-family);
 }
 body{
   margin: 0;
@@ -37,10 +38,10 @@ body>div{
   margin: 0 auto;
   max-width: 16cm;
 }
-ul{
+ul, ol{
   padding-left: 1.8rem;
 }
-li {
+ul>li {
   list-style-type:'> ';
 }
 header, footer, article, aside {
@@ -137,7 +138,7 @@ aside a:active{color: var(--dark-a-active-color);}
 
 hr {
   display: none;
-  border-top: .1rem solid var(--background);
+  border-top: .1rem solid var(--light-color);
   border-bottom: none;
   border-left: none;
   border-right: none;
@@ -223,227 +224,8 @@ footer{
 }
 
 /*
-  Theme 0 : PLAIN  
+  Override import
 */
-/* h1 {
-  animation: animLogo 8s ease infinite both;
-}
-@keyframes animLogo {
-  0% {
-    background: #fff;
-    border-color: #000;
-    color: #000;
-    transform: rotate(0);
-  }
-  19% {
-    background: #fff;
-    border-color: #000;
-    color: #000;
-    transform: rotate(0);
-  }
-  20% {
-    background: #ff0;
-    border-color: #ff0;
-    color: #00f;
-    transform: rotate(2deg);
-  }
-  21% {
-    background: #0ff;
-    border-color: #0ff;
-    color: #f00;
-    transform: rotate(-2deg);
-  }
-  22% {
-    background: #f00;
-    border-color: #f00;
-    color: #0ff;
-    transform: rotate(2deg);
-  }
-  23% {
-    background: #0f0;
-    border-color: #0f0;
-    color: #f0f;
-    transform: rotate(-2deg);
-  }
-  24% {
-    background: #00f;
-    border-color: #00f;
-    color: #ff0;
-    transform: rotate(2deg);
-  }
-  25% {
-    background: #0ff;
-    border-color: #0ff;
-    color: #f00;
-    transform: rotate(-2deg);
-  }
-  26% {
-    background: #f0f;
-    border-color: #f0f;
-    color: #0f0;
-    transform: rotate(2deg);
-  }
-  27% {
-    background: #ff0;
-    border-color: #ff0;
-    color: #00f;
-    transform: rotate(-2deg);
-  }
-  28% {
-    background: #0f0;
-    border-color: #0f0;
-    color: #f0f;
-    transform: rotate(2deg);
-  }
-  29% {
-    background: #00f;
-    border-color: #00f;
-    color: #ff0;
-    transform: rotate(-2deg);
-  }
-  30% {
-    background: #000;
-    border-color: #fff;
-    color: #fff;
-    transform: rotate(3deg);
-  }
-  69% {
-    background: #000;
-    border-color: #fff;
-    color: #fff;
-    transform: rotate(3deg);
-  }
-  70% {
-    background: #00f;
-    border-color: #00f;
-    color: #ff0;
-    transform: rotate(-2deg);
-  }
-  71% {
-    background: #0f0;
-    border-color: #0f0;
-    color: #f0f;
-    transform: rotate(2deg);
-  }
-  72% {
-    background: #f00;
-    border-color: #f00;
-    color: #0ff;
-    transform: rotate(-2deg);
-  }
-  73% {
-    background: #0f0;
-    border-color: #0f0;
-    color: #f0f;
-    transform: rotate(2deg);
-  }
-  74% {
-    background: #00f;
-    border-color: #00f;
-    color: #ff0;
-    transform: rotate(-2deg);
-  }
-  75% {
-    background: #0ff;
-    border-color: #0ff;
-    color: #f00;
-    transform: rotate(2deg);
-  }
-  76% {
-    background: #f0f;
-    border-color: #f0f;
-    color: #0f0;
-    transform: rotate(-2deg);
-  }
-  77% {
-    background: #ff0;
-    border-color: #ff0;
-    color: #00f;
-    transform: rotate(2deg);
-  }
-  78% {
-    background: #0ff;
-    border-color: #0ff;
-    color: #f00;
-    transform: rotate(-2deg);
-  }
-  79% {
-    background: #ff0;
-    border-color: #ff0;
-    color: #00f;
-    transform: rotate(2deg);
-  }
-  80% {
-    background: #fff;
-    border-color: #000;
-    color: #000;
-    transform: rotate(0);
-  }
-  100% {
-    background: #fff;
-    border-color: #000;
-    color: #000;
-    transform: rotate(0);
-  }
-} */
-/*
-  end Theme 0 : PLAIN  
-*/
-
-/*
-  Theme 1 : GRADIENT  
-*/
-/* html{
-  background: linear-gradient(90deg, #00C9FF, #92FE9D, #FC466B 0%, #3F5EFB 100%);
-  background-size: 600% 600%;
-  animation: animBackgrounnd 8s ease infinite;
-}
-body {
-  background: rgba(255, 255, 255, 0.2);
-}
-header, article, aside, footer{
-  mix-blend-mode: luminosity;
-}
-
-header, aside, em {
-  background: linear-gradient(90deg, rgb(79, 79, 79) 0%, rgb(32, 32, 32) 100%);
-}
-footer {
-  background: linear-gradient(90deg, rgba(180,180,180,1) 0%, rgba(76,76,76,1) 100%);
-}
-
-article {
-  background: linear-gradient(90deg, rgb(125, 125, 125) 0%, rgb(208, 208, 208) 100%);
-}
-
-@keyframes animBackgrounnd {
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
-} */
-/*
-  End Theme 1 : GRADIENT  
-*/
-/*
-  Theme 2 : Salmon is the new Black  
-*/
-article {
-  background: salmon;
-}
-html{
-  background: salmon;
-  font-size: 100%;
-  line-height: 1.6rem;
-  letter-spacing: 0rem;
-}
-body {
-  background: url(media/theme-2-pattern-tierce.gif) repeat;
-  mix-blend-mode: multiply;
-}
-body>div {
-  background: salmon;
-  box-shadow: 0 0 6rem 6rem var(--light-color);
-}
-/*
-  End Theme 2 : Salmon is the new Black  
-*/
+/* @import url('stylesheet-override-gradient.css'); */
+/* @import url('stylesheet-override-plain.css'); */
+@import url('/stylesheet-override-salmon.css');
