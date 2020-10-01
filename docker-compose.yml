@@ -1,0 +1,9 @@
+version: '3'
+services:
+  web:
+    image: joyride-static
+    build: .
+    container_name: container-joyride-static
+    restart: always
+    ports:
+      - "3000:80"
