@@ -1,7 +1,7 @@
 /*
   Theme 1 : GRADIENT  
 */
-/* html{
+html{
   background: linear-gradient(90deg, #00C9FF, #92FE9D, #FC466B 0%, #3F5EFB 100%);
   background-size: 600% 600%;
   animation: animBackgrounnd 8s ease infinite;
@@ -28,7 +28,7 @@ article {
   0%{background-position:0% 50%}
   50%{background-position:100% 50%}
   100%{background-position:0% 50%}
-} */
+}
 /*
   End Theme 1 : GRADIENT  
 */

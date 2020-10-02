@@ -222,10 +222,3 @@ svg.logo .reverse {
 footer{
   background: var(--light-background);
 }
-
-/*
-  Override import
-*/
-/* @import url('stylesheet-override-gradient.css'); */
-/* @import url('stylesheet-override-plain.css'); */
-@import url('/stylesheet-override-salmon.css');
