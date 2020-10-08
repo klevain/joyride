@@ -67,20 +67,6 @@ a.video img {
   display: block;
   width: 100%;
 }
-a.video:after {
-  content: '>';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 3rem;
-  background: var(--dark-background);
-  text-align: center;
-  text-decoration: inherit;
-  padding-right: 0.2rem;
-  padding-left: 0.2rem;
-  display: block;
-}
 article {
   background: var(--light-background);
   color: var(--light-color);

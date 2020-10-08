@@ -1,167 +1,176 @@
-
-
 /*
   Theme 0 : PLAIN  
 */
-h1 {
+h1{
+  display: inline-block;
+}
+svg.logo .label,
+svg.logo .frame {
   animation: animLogo 8s ease infinite both;
+  fill: #f00;
+}
+svg.logo .reverse{
+  animation: animBackground 8s ease infinite both;
+  fill: #000;
+}
+@keyframes animBackground {
+  0% {
+    fill: #000;
+  }
+  19% {
+    fill: #000;
+  }
+  20% {
+    fill: #ff0;
+  }
+  21% {
+    fill: #0ff;
+  }
+  22% {
+    fill: #f00;
+  }
+  23% {
+    fill: #0f0;
+  }
+  24% {
+    fill: #00f;
+  }
+  25% {
+    fill: #0ff;
+  }
+  26% {
+    fill: #f0f;
+  }
+  27% {
+    fill: #ff0;
+  }
+  28% {
+    fill: #0f0;
+  }
+  29% {
+    fill: #00f;
+  }
+  30% {
+    fill: #fff;
+  }
+  69% {
+    fill: #fff;
+  }
+  70% {
+    fill: #00f;
+  }
+  71% {
+    fill: #0f0;
+  }
+  72% {
+    fill: #f00;
+  }
+  73% {
+    fill: #0f0;
+  }
+  74% {
+    fill: #00f;
+  }
+  75% {
+    fill: #0ff;
+  }
+  76% {
+    fill: #f0f;
+  }
+  77% {
+    fill: #ff0;
+  }
+  78% {
+    fill: #0ff;
+  }
+  79% {
+    fill: #ff0;
+  }
+  80% {
+    fill: #000;
+  }
+  100% {
+    fill: #000;
+  }
 }
 @keyframes animLogo {
   0% {
-    background: #fff;
-    border-color: #000;
-    color: #000;
-    transform: rotate(0);
+    fill: #fff;
   }
   19% {
-    background: #fff;
-    border-color: #000;
-    color: #000;
-    transform: rotate(0);
+    fill: #fff;
   }
   20% {
-    background: #ff0;
-    border-color: #ff0;
-    color: #00f;
-    transform: rotate(2deg);
+    fill: #00f;
   }
   21% {
-    background: #0ff;
-    border-color: #0ff;
-    color: #f00;
-    transform: rotate(-2deg);
+    fill: #f00;
   }
   22% {
-    background: #f00;
-    border-color: #f00;
-    color: #0ff;
-    transform: rotate(2deg);
+    fill: #0ff;
   }
   23% {
-    background: #0f0;
-    border-color: #0f0;
-    color: #f0f;
-    transform: rotate(-2deg);
+    fill: #f0f;
   }
   24% {
-    background: #00f;
-    border-color: #00f;
-    color: #ff0;
-    transform: rotate(2deg);
+    fill: #ff0;
   }
   25% {
-    background: #0ff;
-    border-color: #0ff;
-    color: #f00;
-    transform: rotate(-2deg);
+    fill: #f00;
   }
   26% {
-    background: #f0f;
-    border-color: #f0f;
-    color: #0f0;
-    transform: rotate(2deg);
+    fill: #0f0;
   }
   27% {
-    background: #ff0;
-    border-color: #ff0;
-    color: #00f;
-    transform: rotate(-2deg);
+    fill: #00f;
   }
   28% {
-    background: #0f0;
-    border-color: #0f0;
-    color: #f0f;
-    transform: rotate(2deg);
+    fill: #f0f;
   }
   29% {
-    background: #00f;
-    border-color: #00f;
-    color: #ff0;
-    transform: rotate(-2deg);
+    fill: #ff0;
   }
   30% {
-    background: #000;
-    border-color: #fff;
-    color: #fff;
-    transform: rotate(3deg);
+    fill: #000;
   }
   69% {
-    background: #000;
-    border-color: #fff;
-    color: #fff;
-    transform: rotate(3deg);
+    fill: #000;
   }
   70% {
-    background: #00f;
-    border-color: #00f;
-    color: #ff0;
-    transform: rotate(-2deg);
+    fill: #ff0;
   }
   71% {
-    background: #0f0;
-    border-color: #0f0;
-    color: #f0f;
-    transform: rotate(2deg);
+    fill: #f0f;
   }
   72% {
-    background: #f00;
-    border-color: #f00;
-    color: #0ff;
-    transform: rotate(-2deg);
+    fill: #0ff;
   }
   73% {
-    background: #0f0;
-    border-color: #0f0;
-    color: #f0f;
-    transform: rotate(2deg);
+    fill: #f0f;
   }
   74% {
-    background: #00f;
-    border-color: #00f;
-    color: #ff0;
-    transform: rotate(-2deg);
+    fill: #ff0;
   }
   75% {
-    background: #0ff;
-    border-color: #0ff;
-    color: #f00;
-    transform: rotate(2deg);
+    fill: #f00;
   }
   76% {
-    background: #f0f;
-    border-color: #f0f;
-    color: #0f0;
-    transform: rotate(-2deg);
+    fill: #0f0;
   }
   77% {
-    background: #ff0;
-    border-color: #ff0;
-    color: #00f;
-    transform: rotate(2deg);
+    fill: #00f;
   }
   78% {
-    background: #0ff;
-    border-color: #0ff;
-    color: #f00;
-    transform: rotate(-2deg);
+    fill: #f00;
   }
   79% {
-    background: #ff0;
-    border-color: #ff0;
-    color: #00f;
-    transform: rotate(2deg);
+    fill: #00f;
   }
   80% {
-    background: #fff;
-    border-color: #000;
-    color: #000;
-    transform: rotate(0);
+    fill: #fff;
   }
   100% {
-    background: #fff;
-    border-color: #000;
-    color: #000;
-    transform: rotate(0);
+    fill: #fff;
   }
 }
 /*
