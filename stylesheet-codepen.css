@@ -1,0 +1,53 @@
+/*
+  Theme 1 : CODEPEN  
+*/
+body {
+  background: var(--light-background);
+}
+body>div{
+  margin: 1rem auto 3rem;
+}
+hr {
+  display: block;
+  margin-top: 3.5rem;
+  margin-bottom: -2rem;
+  border-width: 0.5rem;
+}
+header {
+  background: var(--light-background);
+}
+svg.logo .label {
+  fill: var(--light-color);
+}
+svg.logo .frame {
+  fill: var(--light-color);
+}
+svg.logo .reverse {
+  fill: transparent;
+}
+
+article h2{
+  background: var(--dark-background);
+  color: var(--dark-color);
+  font-style: italic;
+  font-weight: normal;
+  padding-left: .2rem;
+  padding-right: .2rem;
+  display: inline-block;
+}
+article h2 a:link{color: var(--dark-a-link-color);}
+article h2 a:visited{color: var(--dark-a-visited-color);}
+article h2 a:hover{color: var(--dark-a-hover-color);}
+article h2 a:active{color: var(--dark-a-active-color);}
+
+aside {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+footer {
+  background: #ddd;
+}
+/*
+  End Theme 1 : CODEPEN  
+*/
