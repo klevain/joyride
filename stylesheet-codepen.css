@@ -2,7 +2,7 @@
   Theme 1 : CODEPEN  
 */
 body {
-  background: var(--light-background);
+  background: var(--light-background) url("media/codepen.gif") repeat center top;
 }
 body>div{
   margin: 1rem auto 3rem;
@@ -14,6 +14,9 @@ hr {
   border-width: 0.5rem;
 }
 header {
+  background: transparent;
+}
+svg.logo {
   background: var(--light-background);
 }
 svg.logo .label {
