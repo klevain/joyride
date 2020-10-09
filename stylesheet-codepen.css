@@ -2,7 +2,11 @@
   Theme 1 : CODEPEN  
 */
 body {
-  background: var(--light-background) url("media/codepen.gif") repeat center top;
+  background-image: url("media/codepen.gif");
+  background-color: var(--light-background);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
 }
 body>div{
   margin: 1rem auto 3rem;
